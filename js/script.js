@@ -2,7 +2,7 @@ const CONTAINER_SIZE = 960;
 
 const gridContainer = document.querySelector('.grid-container');
 
-let gridWidth = 16;
+let gridWidth = 100;
 let amountOfDivs = gridWidth ** 2;
 
 for(let i = 0; i < amountOfDivs; i++) {
