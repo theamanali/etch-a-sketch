@@ -19,18 +19,18 @@ h1 {
   color: white;
   font-size: 48px;
   text-align: center;
-  margin: 48px 0 0 0 ;
+  margin: 24px 0 0 0 ;
 }
 
 img {
-  max-width: 80px;
-  margin-bottom: 48px;
+  max-width: 50px;
+  margin-bottom: 24px;
 }
 
 .grid-and-slider{
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 48px;
   align-items: center;
 }
 
