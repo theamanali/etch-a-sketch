@@ -1,25 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
 html, body {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  background-color: black;
 }
 
+h1 {
+  font-family: Sansation, sans-serif;
+  color: white;
+  font-size: 48px;
+  text-align: center;
+  margin: 48px 0 0 0 ;
+}
+
+img {
+  max-width: 80px;
+  margin-bottom: 48px;
+}
 
 .grid-container {
-  border: 10px solid black;
+  border: 25px solid white;
+  border-radius: 20px;
   width: 500px;
   height: 500px;
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.input {
+  position: fixed;
+  top: calc(50% + 275px + 48px);
+}
+
+input {
+  width: 275px;
+}
+
+
+p {
+  font-family: Sansation, sans-serif;
+  color: white;
+  font-size: 12px;
+  text-align: center;
 }
 
 .grid-container div {
   box-sizing: border-box;
   border: 1px solid black;
 }
+
