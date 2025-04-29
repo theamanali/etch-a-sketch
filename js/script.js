@@ -1,18 +1,19 @@
 // Colors each grid-box could change to when hovered
 const colorStrings = [
-    // 20% opacity to start, will be added onto with later hovers
-    "rgba(232,20,22,0.2)",
-    "rgba(255,165,0,0.2)",
-    "rgba(250,235,54,0.2)",
-    "rgba(121,195,20,0.2)",
-    "rgba(72,125,231,0.2)",
-    "rgba(75,54,157,0.2)",
-    "rgba(112,54,157,0.2)"
+    // 40% opacity to start, will be added onto with later hovers
+    "rgba(232,20,22,0.4)",
+    "rgba(255,165,0,0.4)",
+    "rgba(250,235,54,0.4)",
+    "rgba(121,195,20,0.4)",
+    "rgba(72,125,231,0.4)",
+    "rgba(75,54,157,0.4)",
+    "rgba(112,54,157,0.4)"
 ];
 
 const gridContainer = document.querySelector('.grid-container');
 const containerWidth = gridContainer.clientWidth;
 const adjustGridSlider = document.querySelector("input");
+const resetButton = document.querySelector(".reset");
 let currentGridWidth = 16
 
 createGrid(currentGridWidth);
@@ -37,6 +38,21 @@ gridContainer.addEventListener("mouseover", (e) => {
 
 adjustGridSlider.addEventListener("change", e => {
     currentGridWidth = e.target.value;
+    createGrid(currentGridWidth);
+})
+
+resetButton.addEventListener("mouseenter", (e) => {
+    const button = e.target;
+    button.style.border = "2px solid white";
+})
+
+resetButton.addEventListener("mouseleave", (e) => {
+    const button = e.target;
+    button.style.border = "none";
+})
+
+resetButton.addEventListener("click", (e) => {
+    resetGrid()
     createGrid(currentGridWidth);
 })
 
