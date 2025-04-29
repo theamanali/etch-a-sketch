@@ -1,8 +1,21 @@
+body {
+
+}
+
+
 .grid-container {
   border: 10px solid black;
-  width: 960px;
-  height: 960px;
+  width: 500px;
+  height: 500px;
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
+  align-content: center;
+}
+
+.grid-container div {
+  box-sizing: border-box;
+  border: 1px solid black;
+  /*flex-grow: 1;    !* Do not grow *!*/
+  /*flex-shrink: 1;  !* Do not shrink *!*/
+  /*margin: 0;       !* Ensure no extra margin *!*/
 }
