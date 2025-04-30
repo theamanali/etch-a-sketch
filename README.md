@@ -4,7 +4,7 @@ A simple browser-based Etch-a-Sketch game built with HTML, CSS, and JavaScript. 
 
 ## 🚀 Try it out
 
-[Play it here!](https://github.com/theamanali/etch-a-sketch)  
+[Play it here!](https://theamanali.github.io/etch-a-sketch/)  
 ![Etch-a-Sketch Screenshot](./img/demo-screenshot.png)
 
 ## ✨ Features
