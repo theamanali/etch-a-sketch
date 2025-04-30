@@ -55,6 +55,7 @@ input {
 .buttons-container {
   display: flex;
   gap: 48px;
+  align-items: center;
 }
 
 button {
