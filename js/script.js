@@ -18,8 +18,28 @@ let currentGridWidth = 16
 
 createGrid(currentGridWidth);
 
+let isMouseDown = false;
+document.addEventListener("mousedown", (e) => {
+    isMouseDown = true;
+    const targetDiv = e.target;
+    if (targetDiv.id === "grid-box") {
+        const currentBgColor = window.getComputedStyle(targetDiv).backgroundColor;
+
+        if (currentBgColor === "rgba(0, 0, 0, 0)") {
+            targetDiv.style.backgroundColor = generateRandomColor();
+        } else {
+            changeOpacity(targetDiv);
+        }
+    }
+})
+
+document.addEventListener("mouseup", () => {
+    isMouseDown = false;
+})
 // Changes color of each grid-box when hovered
 gridContainer.addEventListener("mouseover", (e) => {
+    if (!isMouseDown) return;
+
     const targetDiv = e.target;
     if (targetDiv.id === "grid-box") {
         let currentBgColor = window.getComputedStyle(targetDiv)
@@ -51,7 +71,7 @@ resetButton.addEventListener("mouseleave", (e) => {
     button.style.border = "none";
 })
 
-resetButton.addEventListener("click", (e) => {
+resetButton.addEventListener("click", () => {
     resetGrid()
     createGrid(currentGridWidth);
 })
